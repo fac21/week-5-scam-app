@@ -7,7 +7,9 @@ server.use(staticHandler);
 const homepageHandler = require("./routes/homepage.js");
 
 server.get("/", homepageHandler);
+const addRecipe = require("./routes/addreceipe.js")
 
+server.get("/add-recipe", addRecipe);
 
 
 
