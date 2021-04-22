@@ -15,8 +15,8 @@ function homepageHtml(message){
         </header>
         <main>
             <p>${message}</p>
-            <form method="POST">
-                <label for = 'ingredient'></label>
+            <form method="POST" action="/" id="search-filter">
+                <label for = 'ingredient'>Ingredient:</label>
                 <input id = 'ingredient' name="ingredient" placeholder = 'Type an ingredient'/>
                 
                 <input type="submit" value = 'Search'>
@@ -63,7 +63,7 @@ function addRecipeHtml(){
       <h1 class="margin-top-4">Add Recipe</h1>
       </header>
         <main class="content">
-        <form class="flex__column stack-sm " method="POST" id="blog-form" action="/view-blogs">
+        <form class="flex__column stack-sm " method="POST" id="recipe-form" action="/recipe-added">
           <label for="username">Username</label>
           <input id="username" name="username" required>
           <label for="recipe_name">Recipe Name</label>
