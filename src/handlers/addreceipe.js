@@ -9,8 +9,9 @@ function addRecipe (request, response) {
       
 
 function recipeAdded(request, response) {
-  response.redirect("/recipe-added")
   response.send("<h1>Recipe added! Thank you for contributing to our database.</h1>")
+  response.redirect("/recipe-added")
+  
 }
 
 module.exports = {addRecipe: addRecipe, recipeAdded: recipeAdded};
