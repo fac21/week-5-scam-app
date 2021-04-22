@@ -1,10 +1,7 @@
 BEGIN;
 
-<<<<<<< HEAD
-
-=======
 DROP TABLE IF EXISTS users, recipes, ingredients, match_recipe_ingredients CASCADE;
->>>>>>> a1c6aa43e3ba78217eaefdcec7e2522828826060
+
 
 CREATE TABLE users (
   id SERIAL PRIMARY KEY, 
