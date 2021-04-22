@@ -14,3 +14,6 @@ const options = {
 const db = new pg.Pool(options);
 
 module.exports = db;
+
+//test to see it displays all the users - works
+//db.query("SELECT * FROM USERS").then((result) => console.log(result));
