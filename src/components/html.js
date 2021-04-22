@@ -1,9 +1,9 @@
-const homepageHtml = () => {
-    return 
-`<!DOCTYPE html>
+function homepageHtml(){
+    return `
+    <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8" />
+        <meta charse ="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Scam Recipes</title>
         <link rel="stylesheet" href="main-style.css">
@@ -35,6 +35,4 @@ const homepageHtml = () => {
 };
 
 
-    module.exports = {
- homepageHtml
-    }
+module.exports = { homepageHtml };

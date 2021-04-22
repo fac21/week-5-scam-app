@@ -1,14 +1,12 @@
 const express = require("express");
 const server = express();
 
-const homepageHandler = require("./src/handlers/homepage.js");
+const homepageFile = require("./src/handlers/homepage.js");
 
 const staticHandler = express.static("public");
 server.use(staticHandler);
 
-
-
- server.get("/", homepageHandler);
+ server.get("/", homepageFile.homepageHandler);
  const addRecipe = require("./src/handlers/addreceipe.js")
 
 // server.get("/add-recipe", addRecipe);
