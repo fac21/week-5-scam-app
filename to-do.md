@@ -23,6 +23,7 @@ server.post("/submit", bodyParser, (request, response) => {
   console.log(request.body);
   response.send("thanks for submitting");
 });
+
 ```
 
 ## TESTING
@@ -34,7 +35,7 @@ module.exports = (on, config) => {
   on("task", {
     resetDb: () => {
       console.log("Resetting DB...");
-      // we have to return something or Cypress gets mad
+      //We have to return something or Cypress gets mad
       return null;
     },
   });
@@ -55,7 +56,7 @@ beforeEach(() => {
 ```
 const fs = require("fs");
 const path = require("path");
-const db = require("./connection.js");
+const db = require("./connection.js"); 
 
 const initPath = path.join(__dirname, "init.sql");
 const initSQL = fs.readFileSync(initPath, "utf-8");
@@ -79,12 +80,13 @@ module.exports = (on, config) => {
     },
   });
 };
+
 ```
-### MODULARISING Query Database in a seperate file!
+### MODULARISING (separating) Query Database in a seperate file!
 
-Query database in a diff file from route handlers.IE Create a new file workshop/database/model.js. 
+Query database in a different file from route handlers.IE Create a new file workshop/database/model.js. 
 
-Prob need to also add in error checking
+Probably need to also add in error checking
 
 ``` 
 const db = require("./connection.js");
@@ -96,24 +98,24 @@ function getUsers() {
 module.exports = { getUsers };
 ```
 
-Ie maybe add: 
+ Maybe you can also add an error catching function: 
 
 ```
 .catch((error) => {
     console.error(error);
-    // do stuff with the error here
+    //Tells you exact line error occurs on
   });
 ```
 
 
-2. You can now import and use this function in routes/home.js:
+2. After you import model, you also import query and then use it in route handler in file routes/home.js:
 
 ```
 const model = require("../database/model.js");
 
 function get(request, response) {
   model.getUsers().then((users) => {
-    // ...
+    // ...more code 
   });
 }
 ```
