@@ -1,15 +1,17 @@
 const express = require("express");
 const server = express();
 
+const homepageHandler = require("./src/handlers/homepage.js");
+
 const staticHandler = express.static("public");
 server.use(staticHandler);
 
-const homepageHandler = require("./routes/homepage.js");
 
-server.get("/", homepageHandler);
-const addRecipe = require("./routes/addreceipe.js")
 
-server.get("/add-recipe", addRecipe);
+ server.get("/", homepageHandler);
+ const addRecipe = require("./src/handlers/addreceipe.js")
+
+// server.get("/add-recipe", addRecipe);
 
 
 

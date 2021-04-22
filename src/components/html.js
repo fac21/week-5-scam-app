@@ -1,5 +1,6 @@
-const html = `
-<!DOCTYPE html>
+const homepageHtml = () => {
+    return 
+`<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
@@ -30,11 +31,10 @@ const html = `
         </main>
     </body>
 </html>
-    `;
+    `
+};
 
-    function homepageHandler(request, response) {
-        response.send(html);
-      }
 
-      module.exports = homepageHandler;
- 
+    module.exports = {
+ homepageHtml
+    }
