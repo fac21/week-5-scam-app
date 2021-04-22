@@ -1,4 +1,4 @@
-function homepageHtml(recipes, ingredientList){
+function homepageHtml(recipes){
     let html = `
     <!DOCTYPE html>
 <html lang="en">
@@ -30,7 +30,6 @@ function homepageHtml(recipes, ingredientList){
             </section>
 
             <ul>${recipes}</ul>
-            <ul>${ingredientList}</ul>
         </main>
     </body>
 </html>

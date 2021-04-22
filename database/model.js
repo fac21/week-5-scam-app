@@ -4,7 +4,6 @@ function getRecipes()  {
   return db.query("SELECT name FROM Recipes").then((result) => result.rows)
   .catch((error) => {
         console.error(error);
-        
       });
 }   
 
