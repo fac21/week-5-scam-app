@@ -24,4 +24,35 @@ CREATE TABLE match_recipe_ingredients (
   ingredient_id INTEGER REFERENCES ingredients(id)
 );
 
+INSERT INTO users (name) VALUES
+  ('Chisha'),
+  ('Saki'),
+  ('Amy'),
+  ('Mariya'),
+;
+
+INSERT INTO recipes (name, user_id) VALUES
+  ('Carrot Cake', 1),
+  ('Carrot and Ginger Soup', 2),
+  ('Steak and Chips', 3),
+  ('Carrot and Veggie Lasagne', 4),
+;
+
+INSERT INTO ingredients (name) VALUES
+  ('Carrots'),
+  ('Flour'),
+  ('Egg'),
+  ('Ginger'),
+  ('Steak'),
+  ('Potatoes'),
+  ('Peppers'),
+  ('Tomatoes'),
+  ('Pasta'),
+;
+
+INSERT INTO match_recipe_ingredients (recipe_id, ingredient_id) VALUES
+  (1, 1),
+  (1, 2),
+;
+
 COMMIT;
