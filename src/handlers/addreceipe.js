@@ -43,4 +43,4 @@ function addRecipe (request, response) {
     response.send(html);
     }
       
-module.exports = {addRecipe};
+module.exports = { addRecipe:addRecipe };

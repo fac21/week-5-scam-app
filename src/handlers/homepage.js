@@ -6,4 +6,4 @@ function homepageHandler(request, response) {
     response.send(homepage);
 }
 
-module.exports =  { homepageHandler };
+module.exports =  { homepageHandler: homepageHandler };
