@@ -9,8 +9,7 @@ server.use(staticHandler);
  server.get("/", homepageFile.homepageHandler);
  const addRecipe = require("./src/handlers/addreceipe.js")
 
- server.get("/add-recipe", addRecipe.addRecipe);
-
+server.get("/add-recipe", addRecipe.addRecipe);
 
 
 

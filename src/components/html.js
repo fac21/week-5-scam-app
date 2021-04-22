@@ -26,7 +26,7 @@ function homepageHtml(message){
                 <article></article>
             </section>
             <section>
-                <input type="button" class="" onclick="location.href='https://whispering-sierra-27034.herokuapp.com/addrecipe';" value="Add a recipe" />
+                <input type="button" class="" onclick="location.href='/add-recipe';" value="Add a recipe" />
             </section>
         </main>
     </body>
