@@ -9,8 +9,10 @@ function addRecipe (request, response) {
 
 function addToDb(request, response){
   const info = request.body;
-  db.query("INSERT INTO users(name), recipes(name) VALUES($1) ($2)", [username] [recipe]);
-  //ingredients is its own funky issue
+  db.query("INSERT INTO users(name) VALUES($1)", [info.username]);
+  db.query("INSERT INTO recipes(name) VALUES($1)", [info.recipe_name]);
+  //const ingredArray = info.ingredients.split("").trim();
+  //ingredArray.forEach(x => db.query("INSERT INTO ingredients(name) VALUES ($1)", [x]))
 }
       
 
