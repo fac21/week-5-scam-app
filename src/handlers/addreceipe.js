@@ -5,4 +5,4 @@ function addRecipe (request, response) {
     response.send(newHtml);
     }
       
-module.exports = {addRecipe};
+module.exports = {addRecipe: addRecipe};

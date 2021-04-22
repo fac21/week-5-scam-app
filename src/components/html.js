@@ -6,11 +6,11 @@ function homepageHtml(message){
         <meta charse ="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Scam Recipes</title>
-        <link rel="stylesheet" href="main-style.css">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <header>
-            <img src="#.png" alt="#">
+            <img src="foodpic.jpg" alt="picture of a variety of food">
             <h1>Welcome to Scam Recipes</h1>
         </header>
         <main>
