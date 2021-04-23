@@ -5,7 +5,7 @@ function addRecipe (request, response) {
     let newHtml = html.addRecipeHtml();
     response.send(newHtml);
     response.redirect("/add-recipe")
-    }
+}
 
 function addToDb(request, response){
   const info = request.body;

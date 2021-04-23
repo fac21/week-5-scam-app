@@ -55,9 +55,6 @@ function addRecipeHtml(){
       <header>
      
       <nav class="flex__row ">
-      <a class="content_link" href="/view-blogs">
-              View Blog
-          </a>
           <a class="content_link" href="/">
               Home
           </a>
@@ -65,7 +62,7 @@ function addRecipeHtml(){
       <h1 class="margin-top-4">Add Recipe</h1>
       </header>
         <main class="content">
-        <form class="flex__column stack-sm " method="POST" id="blog-form" action="/view-blogs">
+        <form class="flex__column stack-sm " method="POST" id="blog-form" action="/recipe-added">
           <label for="username">Username</label>
           <input id="username" name="username" required>
           <label for="recipe_name">Recipe Name</label>
