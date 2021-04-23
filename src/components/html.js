@@ -1,4 +1,4 @@
-function homepageHtml(message){
+function homepageHtml(recipes){
     let html = `
     <!DOCTYPE html>
 <html lang="en">
@@ -14,9 +14,9 @@ function homepageHtml(message){
             <h1>Welcome to Scam Recipes</h1>
         </header>
         <main>
-            <p>${message}</p>
-            <form method="POST" action="/" id="search-filter">
-                <label for = 'ingredient'>Ingredient:</label>
+            
+            <form method="POST">
+                <label for = 'ingredient'></label>
                 <input id = 'ingredient' name="ingredient" placeholder = 'Type an ingredient'/>
                 
                 <input type="submit" value = 'Search'>
@@ -28,6 +28,8 @@ function homepageHtml(message){
             <section>
                 <input type="button" class="" onclick="location.href='/add-recipe';" value="Add a recipe" />
             </section>
+
+            <ul>${recipes}</ul>
         </main>
     </body>
 </html>
@@ -63,7 +65,7 @@ function addRecipeHtml(){
       <h1 class="margin-top-4">Add Recipe</h1>
       </header>
         <main class="content">
-        <form class="flex__column stack-sm " method="POST" id="recipe-form" action="/recipe-added">
+        <form class="flex__column stack-sm " method="POST" id="blog-form" action="/view-blogs">
           <label for="username">Username</label>
           <input id="username" name="username" required>
           <label for="recipe_name">Recipe Name</label>
